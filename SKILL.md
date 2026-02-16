@@ -46,7 +46,9 @@ bash scripts/replace-icon.sh /path/to/icon-1024x1024.png
 Default prefix is `icon`. Override with `ICON_PREFIX` env var.
 
 **iOS** (`ios/App/App/Assets.xcassets/AppIcon.appiconset/`):
-All required sizes: 1024, 512, 180, 167, 152, 120, 114, 87, 80, 76, 60, 58, 57, 40, 29, 20.
+All required sizes: 1024, 180, 167, 152, 120, 87, 80, 76, 58, 40, 29, 20.
+
+Since Xcode 14, you can provide a single 1024x1024 icon and Xcode auto-generates all sizes. Select "Single Size" in the asset catalog inspector. Use "All Sizes" mode only if you need custom-tuned icons at specific sizes.
 
 **Android** (`android/app/src/main/res/`):
 - Launcher icons (`ic_launcher.png`, `ic_launcher_round.png`) -- mdpi through xxxhdpi

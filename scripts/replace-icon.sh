@@ -49,12 +49,8 @@ echo ""
 echo "=== iOS App Icons ==="
 IOS_DIR="$PROJ_ROOT/ios/App/App/Assets.xcassets/AppIcon.appiconset"
 if [ -d "$IOS_DIR" ]; then
-  for size in 1024 512 180 167 152 120 114 87 80 76 60 58 57 40 29 20; do
-    if [ "$size" = "512" ]; then
-      resize "$size" "$IOS_DIR/AppIcon-512@2x.png"
-    else
-      resize "$size" "$IOS_DIR/${size}.png"
-    fi
+  for size in 1024 180 167 152 120 87 80 76 58 40 29 20; do
+    resize "$size" "$IOS_DIR/${size}.png"
   done
 else
   echo "  ⚠ Skipped — directory not found: $IOS_DIR"
